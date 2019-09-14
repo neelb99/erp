@@ -11,12 +11,20 @@ router.route('/login').post((req,res)=>{
 
 router.route('/register').post((req,res)=>{
     const username = req.body.username;
-    const password = req.body.password;
-    const role = req.body.role;
-    const newUser = new user({username:username,password:password,role:role});
-    newUser.save()
-        .then(()=>res.json("User Added"))
-        .catch(()=>res.json("error"));
+    user.findOne({username:username})
+        .then(foundUser=>{
+            if(foundUser===null){
+                const password = req.body.password;
+                const role = req.body.role;
+                const newUser = new user({username:username,password:password,role:role});
+                newUser.save()
+                    .then(()=>res.json("User Added"))
+                    .catch(()=>res.json("error"));
+            }
+            else{
+                res.json(null);
+            }
+        })
 })
 
 module.exports = router;
