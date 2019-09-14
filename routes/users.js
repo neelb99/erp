@@ -7,11 +7,14 @@ router.route('/login').post((req,res)=>{
     const password = req.body.password;
     user.findOne({username:username})
         .then(foundUser=>{
-            bcrypt.compare(password,foundUser.password)
-                .then(same=>{
-                    if(same){res.json(foundUser);}
-                    else{res.json("wrong");}
-                })
+            if(foundUser===null){res.json(foundUser)}
+            else{
+                bcrypt.compare(password,foundUser.password)
+                    .then(same=>{
+                        if(same){res.json(foundUser);}
+                        else{res.json("wrong");}
+                    })
+            }
         })
         .catch(()=>{res.json("error")});
 })
