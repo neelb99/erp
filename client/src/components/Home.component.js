@@ -1,10 +1,23 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import Loginform from './Loginform.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/home.css';
 
 const Home = ()=>{
-    return(
+    const [loaded,setLoaded] = useState(false)
+    useEffect(()=>{
+        const name = sessionStorage.getItem('username');
+        if(name!==null){
+            window.location = '/home';
+        }
+        else{
+            setLoaded(true);
+        }
+    },[]);
+
+    const checkLoaded = ()=>{
+        if(loaded){
+        return(
         <div className="landing row text-center">
             <div className="col-12 col-md-6" id="intro">
                 <h1>Sample ERP</h1>
@@ -14,6 +27,13 @@ const Home = ()=>{
                 <Loginform/>
             </div>
         </div>
+        );}
+    }
+
+    return(
+        <React.Fragment>
+            {checkLoaded()}
+        </React.Fragment>
     );
 }
 
