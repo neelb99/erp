@@ -22,6 +22,11 @@ const Loginform = ()=>{
                     setError('block');
                     setErrorMessage('User not found')
                 }
+                else if(res.data==="wrong"){
+                    setError('block');
+                    console.log(res.data);
+                    setErrorMessage('Wrong Password')
+                }
                 else{
                     setError('none');
                     setErrorMessage('')

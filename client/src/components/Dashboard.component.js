@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import Logout from './Lougout.component';
 
 const Dashboard = ()=>{
     const [loaded,setLoaded] = useState(false);
@@ -13,18 +14,12 @@ const Dashboard = ()=>{
         }
     },[])
 
-    const handleClick = ()=>{
-        sessionStorage.removeItem('username');
-        sessionStorage.removeItem('role');
-        window.location='/';
-    }
-
     const checkLoaded = ()=>{
         if(loaded){
             return(
                 <div>
                     <h1>Welcome</h1>
-                    <button onClick={handleClick}>Logout</button>
+                    <Logout />
                 </div>
             );
         }
