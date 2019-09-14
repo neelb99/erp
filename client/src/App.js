@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import Home from './components/Home.component';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <React.Fragment>
+      <Home />
+    </React.Fragment>
   );
 }
 

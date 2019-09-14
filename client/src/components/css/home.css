@@ -1,0 +1,37 @@
+.landing{
+    min-height: 100vh;
+    background: #3f4c6b;
+    background: -moz-linear-gradient(left,  #3f4c6b 0%, #3f4c6b 100%);
+    background: -webkit-linear-gradient(left,  #3f4c6b 0%,#3f4c6b 100%);
+    background: linear-gradient(to right,  #3f4c6b 0%,#3f4c6b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#3f4c6b',GradientType=1 );
+
+}
+
+#intro{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+
+#login{
+    align-self: center;
+    color:black;    
+}
+
+.row{
+    margin:0;
+}
+
+h1{
+    font-size:2.85rem;
+}
+
+p{
+    font-size: 1.15rem;
+    margin-top:20px;
+}

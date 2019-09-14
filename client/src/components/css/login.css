@@ -1,0 +1,12 @@
+#formsection{
+    min-height: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+input{
+    margin-top:20px!important;
+}
+
