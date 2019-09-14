@@ -20,6 +20,7 @@ const Registerform = ()=>{
             password: password.trim(),
             role:role
         }
+        setError('none');
         axios.post('/api/users/register',user)
             .then(res=>{
                 if(res.data===null){

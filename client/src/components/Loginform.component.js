@@ -16,6 +16,8 @@ const Loginform = ()=>{
             username: username.trim(),
             password: password.trim()
         }
+        setError('none');
+        setErrorMessage('');
         axios.post('/api/users/login',user)
             .then(res=>{
                 if(res.data===null){
@@ -28,8 +30,6 @@ const Loginform = ()=>{
                     setErrorMessage('Wrong Password')
                 }
                 else{
-                    setError('none');
-                    setErrorMessage('')
                     sessionStorage['username']  = res.data.username;
                     sessionStorage['role']=res.data.role;
                     window.location='/home';
