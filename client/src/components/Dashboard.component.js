@@ -59,10 +59,28 @@ const Dashboard = ()=>{
             );
         }
         else if(userRole==='employee'){
-            return <h1>Employee</h1>
+            return (
+                <React.Fragment>
+                    <Card img={person} buttonText="View Customers"/>
+                    <Card img={cart} buttonText="Products"/>
+                    <Card img={tasks} buttonText="Your Tasks"/>
+                    <Card img={cash} buttonText="Executed Orders"/>
+                    <Card img={form} buttonText="Send Feedback"/>
+                    <Card img={message} buttonText="View Messages"/>
+                </React.Fragment>
+            );
         }
         else if(userRole==='customer'){
-            return <h1>Customer</h1>
+            return (
+                <React.Fragment>
+                    <Card img={person} buttonText="View Account"/>
+                    <Card img={cart} buttonText="Products"/>
+                    {/* <Card img={tasks} buttonText="View Orders"/> */}
+                    <Card img={cash} buttonText="Transactions"/>
+                    <Card img={form} buttonText="Send Feedback"/>
+                    <Card img={message} buttonText="View Messages"/>
+                </React.Fragment>
+            );
         }
     }
 
