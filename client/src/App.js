@@ -8,6 +8,7 @@ import Users from './components/Users.component';
 import AddBroadcast from './components/AddBroadcast.component'
 import AddProduct from './components/AddProduct.component';
 import ManageProducts from './components/ManageProducts.component';
+import ViewFeedback from './components/ViewFeedback.component';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route exact path="/newbroadcast" component={AddBroadcast}></Route>
       <Route exact path="/addproducts" component={AddProduct}></Route>
       <Route exact path="/manageproducts" component={ManageProducts}></Route>
+      <Route exact path="/viewfeedback" component={ViewFeedback}></Route>
     </Router>
   );
 }
