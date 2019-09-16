@@ -1,0 +1,40 @@
+td{
+    color:white;
+}
+
+.usertable h1{
+    padding-bottom: 40px;
+}
+
+.jumbotron{
+    color:black;
+}
+
+#pastbroadcasts h1{
+    padding-top:10px;
+    padding-bottom:25px;
+}
+
+#pastbroadcasts .row{
+    margin-top:60px;
+}
+
+#pastbroadcasts .jumbotron{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top:10px;
+    padding-bottom:5px;
+    background-color: rgba(233, 236, 239,0.8)
+}
+
+#pastbroadcasts .jumbotron p{
+    margin:0;
+}
+
+#pastbroadcasts .jumbotron button{
+    margin-top:25px;
+    margin-bottom:10px;
+    justify-self: flex-end;
+}

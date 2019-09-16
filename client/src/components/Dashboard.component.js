@@ -7,7 +7,8 @@ import cart from '../images/cart.png';
 import tasks from '../images/tasks.png'
 import form from '../images/form.png';
 import message from '../images/message.png';
-import cash from '../images/cash.png'
+import cash from '../images/cash.png';
+import add from '../images/add.png';
 
 const Dashboard = ()=>{
     const [loaded,setLoaded] = useState(false);
@@ -49,12 +50,12 @@ const Dashboard = ()=>{
         if(userRole==='admin'){
             return(
                 <React.Fragment>
-                    <Card img={person} buttonText="Manage Users"/>
+                    <Card img={person} link="/users" buttonText="Manage Users"/>
                     <Card img={cart} buttonText="Manage Products"/>
                     <Card img={tasks} buttonText="Manage Tasks"/>
-                    <Card img={cash} buttonText="Manage Finances"/>
+                    <Card img={add} link="/adduser" buttonText="Add Users"/>
                     <Card img={form} buttonText="View Feedback"/>
-                    <Card img={message} buttonText="Send Broadcast"/>
+                    <Card img={message} link="/newbroadcast" buttonText="Send Broadcast"/>
                 </React.Fragment>
             );
         }

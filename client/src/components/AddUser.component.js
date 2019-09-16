@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import Registerform from './Registerform.component';
 import Logout from './Lougout.component'
+import Back from './Back.component'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/home.css';
 
@@ -33,6 +34,7 @@ const AddUser = ()=>{
                 <Registerform />
             </div>
             <div id="logout"><Logout /></div>
+            <div id="back"><Back /></div>
         </div>
         );}
     }
