@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import AddUser from './components/AddUser.component';
 import Users from './components/Users.component';
 import AddBroadcast from './components/AddBroadcast.component'
+import AddProduct from './components/AddProduct.component';
+import ManageProducts from './components/ManageProducts.component';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route exact path='/adduser' component={AddUser}></Route>
       <Route exact path='/users' component={Users}></Route>
       <Route exact path="/newbroadcast" component={AddBroadcast}></Route>
+      <Route exact path="/addproducts" component={AddProduct}></Route>
+      <Route exact path="/manageproducts" component={ManageProducts}></Route>
     </Router>
   );
 }

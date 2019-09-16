@@ -51,10 +51,10 @@ const Dashboard = ()=>{
             return(
                 <React.Fragment>
                     <Card img={person} link="/users" buttonText="Manage Users"/>
-                    <Card img={cart} buttonText="Manage Products"/>
-                    <Card img={tasks} buttonText="Manage Tasks"/>
-                    <Card img={add} link="/adduser" buttonText="Add Users"/>
-                    <Card img={form} buttonText="View Feedback"/>
+                    <Card img={add} link="/adduser" buttonText="Add User"/>
+                    <Card img={cart} link= "/manageproducts" buttonText="Manage Products"/>
+                    <Card img={add} link="/addproducts" buttonText="Add Products"/>
+                    <Card img={form} link="/viewfeedback" buttonText="View Feedback"/>
                     <Card img={message} link="/newbroadcast" buttonText="Send Broadcast"/>
                 </React.Fragment>
             );
