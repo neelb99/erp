@@ -40,4 +40,19 @@ router.route('/register').post((req,res)=>{
         })
 })
 
+router.route('/view').get((req,res)=>{
+    user.find()
+        .then(found=>res.json(found))
+})
+
+router.route('/viewcustomers').get((req,res)=>{
+    user.find({role:'customer'})
+        .then(found=>res.json(found));
+})
+
+router.route('/delete/:id').get((req,res)=>{
+    user.findByIdAndDelete(req.params.id)
+        .then(()=>res.json("deleted"))
+})
+
 module.exports = router;

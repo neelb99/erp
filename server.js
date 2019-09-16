@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const userRouter = require('./routes/users');
+const broadcastRouter = require('./routes/broadcasts');
 require('dotenv').config();
 
 const uri = process.env.DB_URI;
@@ -15,6 +16,7 @@ mongoose.connect(uri,{useCreateIndex:true,useNewUrlParser:true,useUnifiedTopolog
     .catch(err=>console.log(err));
 
 app.use('/api/users',userRouter);
+app.use('/api/broadcasts',broadcastRouter);
 
 if(PORT!==5000){
 app.use(express.static(path.join(__dirname,"client","build")));
