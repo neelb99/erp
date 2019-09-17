@@ -32,7 +32,9 @@ const Users = ()=>{
         if(loaded){
             return(
                 <div id="users" className="landing text-center">
+                    <div id="dashheading">
                     <h1 id="dashheading">Users</h1>
+                    </div>
                     <div className="row">
                         <div className="col-12 usertable">
                             <table className="table table-dark table-bordered">

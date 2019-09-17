@@ -27,7 +27,9 @@ const ExecutedOrders = ()=>{
         return(
         <React.Fragment>
             <div className="landing text-center" id="pastbroadcasts">
+                <div id="dashheading">
                 <h1 id="dashheading">Executed Orders</h1>
+                </div>
                 <div className="row">
                     {orders.map(order=>{
                         return (
