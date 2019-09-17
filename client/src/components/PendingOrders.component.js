@@ -40,7 +40,7 @@ const PendingOrders = ()=>{
         return(
         <React.Fragment>
             <div className="landing text-center" id="pastbroadcasts">
-                <h1>Pending Orders</h1>
+                <h1 id="dashheading">Pending Orders</h1>
                 <div className="row">
                     {orders.map(order=>{
                         return (

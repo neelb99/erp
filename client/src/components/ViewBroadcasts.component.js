@@ -33,7 +33,7 @@ const ViewBroadcasts = ()=>{
         return(
         <React.Fragment>
             <div className="landing text-center" id="pastbroadcasts">
-                <h1>Broadcasts</h1>
+                <h1 id="dashheading">Broadcasts</h1>
                 <div className="row">
                     {broadcasts.map(past=>{
                         return (

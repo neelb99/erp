@@ -45,7 +45,7 @@ const ViewProducts = ()=>{
                 <div className="landing">
                     
                     <div className="text-center" id="dashheading">
-                        <h1>Products</h1>
+                        <h1 id="dashheading">Products</h1>
                     </div>
                     <div id="dash">
                         <div className="row">
