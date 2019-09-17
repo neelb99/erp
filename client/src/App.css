@@ -19,6 +19,14 @@ td{
     margin-top:60px;
 }
 
+#users h1{
+    padding-top:25px;
+}
+
+#users .row{
+    margin-top:60px;
+}
+
 #pastbroadcasts .jumbotron{
     display: flex;
     flex-direction: column;
@@ -37,4 +45,30 @@ td{
     margin-top:25px;
     margin-bottom:10px;
     justify-self: flex-end;
+}
+
+#order .jumbotron button {
+    margin-top:9px;
+}
+
+#cartsection{
+    padding-top:40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#cartsection .jumbotron button{
+    margin-bottom:5px;
+    margin-top:5px;
+}
+
+#cartsection .jumbotron{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.landing #cart{
+    align-self: center;
+    justify-self: center;
 }

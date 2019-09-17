@@ -9,6 +9,12 @@ import AddBroadcast from './components/AddBroadcast.component'
 import AddProduct from './components/AddProduct.component';
 import ManageProducts from './components/ManageProducts.component';
 import ViewFeedback from './components/ViewFeedback.component';
+import AddFeedback from './components/AddFeedback.component';
+import ViewBroadcasts from './components/ViewBroadcasts.component';
+import ViewProducts from './components/ViewProducts.component';
+import PendingOrders from './components/PendingOrders.component';
+import ExecutedOrders from './components/ExecutedOrders.component';
+import ViewOrders from './components/ViewOrders.component';
 
 function App() {
   return (
@@ -21,6 +27,12 @@ function App() {
       <Route exact path="/addproducts" component={AddProduct}></Route>
       <Route exact path="/manageproducts" component={ManageProducts}></Route>
       <Route exact path="/viewfeedback" component={ViewFeedback}></Route>
+      <Route exact path="/addfeedback" component={AddFeedback}></Route>
+      <Route exact path="/viewbroadcasts" component={ViewBroadcasts}></Route>
+      <Route exact path="/viewproducts" component={ViewProducts}></Route>
+      <Route exact path="/pendingorders" component={PendingOrders}></Route>
+      <Route exact path="/executedorders" component={ExecutedOrders}></Route>
+      <Route exact path="/vieworders" component={ViewOrders}></Route>
     </Router>
   );
 }

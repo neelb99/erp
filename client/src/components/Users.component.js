@@ -31,27 +31,29 @@ const Users = ()=>{
     const checkRole = ()=>{
         if(loaded){
             return(
-                <div className="landing text-center">
-                    <div id="intro" className="col-12 usertable">
-                        <h1>Users</h1>
-                        <table className="table table-dark table-bordered">
-                            <thead className="thead-dark">
-                                <th>Username</th>
-                                <th>Role</th>
-                                <th>Delete</th>
-                            </thead>
-                            <tbody>
-                                {users.map(user=>{
-                                    return(
-                                        <tr key={user._id}>
-                                            <td>{user.username}</td>
-                                            <td>{user.role}</td>
-                                            <td><button className="btn btn-danger" onClick={()=>handleClick(user._id)}>Delete</button></td>
-                                        </tr>
-                                    );
-                                })}
-                            </tbody>
-                        </table>
+                <div id="users" className="landing text-center">
+                    <h1>Users</h1>
+                    <div className="row">
+                        <div className="col-12 usertable">
+                            <table className="table table-dark table-bordered">
+                                <thead className="thead-dark">
+                                    <th>Username</th>
+                                    <th>Role</th>
+                                    <th>Delete</th>
+                                </thead>
+                                <tbody>
+                                    {users.map(user=>{
+                                        return(
+                                            <tr key={user._id}>
+                                                <td>{user.username}</td>
+                                                <td>{user.role}</td>
+                                                <td><button className="btn btn-danger" onClick={()=>handleClick(user._id)}>Delete</button></td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div id="logout"><Logout /></div>
                     <div id="back"><Back /></div>

@@ -62,24 +62,22 @@ const Dashboard = ()=>{
         else if(userRole==='employee'){
             return (
                 <React.Fragment>
-                    <Card img={person} buttonText="View Customers"/>
-                    <Card img={cart} buttonText="Products"/>
-                    <Card img={tasks} buttonText="Your Tasks"/>
-                    <Card img={cash} buttonText="Executed Orders"/>
-                    <Card img={form} buttonText="Send Feedback"/>
-                    <Card img={message} buttonText="View Messages"/>
+                    <Card img={person} link="/users" buttonText="View Customers"/>
+                    <Card img={cart} link="/viewproducts" buttonText="Products"/>
+                    <Card img={tasks} link="/pendingorders" buttonText="Pending Orders"/>
+                    <Card img={cash} link="/executedorders" buttonText="Executed Orders"/>
+                    <Card img={form} link="/addfeedback" buttonText="Send Feedback"/>
+                    <Card img={message} link="/viewbroadcasts" buttonText="View Messages"/>
                 </React.Fragment>
             );
         }
         else if(userRole==='customer'){
             return (
                 <React.Fragment>
-                    <Card img={person} buttonText="View Account"/>
-                    <Card img={cart} buttonText="Products"/>
-                    {/* <Card img={tasks} buttonText="View Orders"/> */}
-                    <Card img={cash} buttonText="Transactions"/>
-                    <Card img={form} buttonText="Send Feedback"/>
-                    <Card img={message} buttonText="View Messages"/>
+                    <Card img={cart} link="/viewproducts"buttonText="Products"/>
+                    <Card img={cash} link="/vieworders" buttonText="Orders"/>
+                    <Card img={form} link="/addfeedback" buttonText="Send Feedback"/>
+                    <Card img={message} link="/viewbroadcasts" buttonText="View Messages"/>
                 </React.Fragment>
             );
         }

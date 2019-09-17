@@ -11,7 +11,7 @@ const Logout = ()=>{
     }
 
     return(
-        <a href="#" id="logout"><img onClick = {handleClick} src={img}></img></a>
+        <a href="#" id="logout"><img width="30px" height="30px" onClick = {handleClick} src={img}></img></a>
     );
 }
 
